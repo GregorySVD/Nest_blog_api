@@ -33,6 +33,13 @@ model Category {
   posts PostCategory[]
 }
 
+model RefreshToken {
+  id       String     @id @default(uuid())
+  token   String
+  userId  String
+  expiryDate DateTime
+}
+
 model PostCategory {
   postId     String
   categoryId String
